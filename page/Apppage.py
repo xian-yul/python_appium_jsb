@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support import expected_conditions as EC
 
 from appium import webdriver
@@ -71,13 +73,19 @@ class AppPage(object):
         return _text
 
     def return_current_activity(self):
+        """返回当前页面 activity"""
         return self.driver.current_activity
 
     def input_text(self, locator, txt):
+        """文本输入"""
         ele = self.find_element(locator)
         ele.clear()
         sleep(0.2)
         ele.send_keys(txt)
+
+    def save_screenshot(self):
+        """当前页面截图"""
+        self.driver.save_screenshot("./{}.png".format(time.strftime("%Y_%m_%d_%H_%M_%S")))
 
     def drag(self, bx=0.50, bw=0.05, by=0.4, bz=0.9):
         x = self.driver.get_window_size()['width']
