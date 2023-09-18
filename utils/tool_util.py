@@ -1,4 +1,5 @@
 import random
+import time
 
 from datetime import datetime
 
@@ -47,3 +48,6 @@ def gbk2312_name():
 def look_for_text(loc):
     xpath = "//*[contains(text()," + loc + ")]"
     return xpath
+
+def now_time():
+    return time.strftime('%Y-%m-%d %H:%M:%S')

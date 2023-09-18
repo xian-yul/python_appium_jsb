@@ -1,0 +1,5 @@
+user_login_phone: 'id==cn.jinsubao.app:id/et_phone'
+user_login_code_btn: 'id==cn.jinsubao.app:id/cv_code'
+user_login_code_text: 'id==cn.jinsubao.app:id/et_code'
+user_login_btn: 'id==cn.jinsubao.app:id/btn_login'
+home_me: "xpath==//*[@text='我的']"
